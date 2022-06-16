@@ -1,10 +1,10 @@
 # Mobile-Programming-Final-Exam-Assignment-202116019
 
-기말고사 과제 앱 만들기 : 계산기
+기말고사 과제 앱 만들었습니다. 저는 버튼이라는 코드를 이용하여 각 0~9의 숫자의 버튼을 만들어서 계산기가 가능하는 앱을 만들어봤습니다.
 
 
 
--
+```
 
 //  ViewController.swift
 //  202116019 유정훈 기말고사과제
@@ -31,7 +31,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+```
+버튼을 이용하여 숫자를 디스플레이에 보여주는 코드
+```
     @IBAction func touchDigit(_ sender: UIButton) {
         let dight = sender.currentTitle!
             print("thouched \(dight) dight");
@@ -43,12 +45,18 @@ class ViewController: UIViewController {
         }
             userTyping = true;
 }
+```
+C 라는 버튼으로 clear 할 수 있는 코드
+```
     // C 버튼 기능
     @IBAction func clear(_ sender: Any) {
         display.text = ""
         sum = 0
         num = 0
     }
+```
++라는 버튼으로 sum이라는 함수를 이용한 코드
+```
     
     // + 버튼 기능
     @IBAction func plus(_ sender: Any) {
@@ -61,7 +69,9 @@ class ViewController: UIViewController {
                     isPlus = true
                 }
     }
-    
+  ```
+  -라는 버튼으로 miuns라는 함수를 이용한 코드
+  ```
     // - 버튼 기능
     @IBAction func minus(_ sender: Any) {
         if(isMinus==false){
@@ -73,8 +83,12 @@ class ViewController: UIViewController {
                     isMinus = true
                 }
     }
+ ```
     
-    // x 버튼 기능
+ x라는 버튼으로 cross라는 함수를 이용한 코드
+    
+ ```
+   // x 버튼 기능
     @IBAction func cross(_ sender: Any) {
         if(isCross==false){
                    num = Int(display.text!)!
@@ -85,7 +99,10 @@ class ViewController: UIViewController {
                    isCross = true
                }
     }
-    
+ ```
+  / 라는 버튼으로 div라는 함수를 이용한 코드
+   
+ ``` 
     // / 버튼 기능
     @IBAction func div(_ sender: Any) {
         if(isDiv==false){
@@ -97,7 +114,11 @@ class ViewController: UIViewController {
                     isDiv = true
                 }
     }
-    
+ ```
+ = 이라는 버튼으로 result라는 함수를 이용한 코드
+ ```
+	
+	
     // = 버튼 기능
     @IBAction func result(_ sender: Any) {
         if isPlus{
