@@ -42,8 +42,6 @@ class ViewController: UIViewController {
             display.text = dight
         }
             userTyping = true;
-
-    
 }
     // C 버튼 기능
     @IBAction func clear(_ sender: Any) {
